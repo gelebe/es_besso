@@ -142,7 +142,7 @@ h6 {
 /*--COS DE LA P�GINA(PART CENTRAL)--*/
 #cos {
     width: 920px;
-    margin: 30px auto 30px auto;
+    margin: 0 auto 30px auto;
     border: 1px solid #999;
     background-color: #800000;
 }
@@ -158,6 +158,8 @@ h6 {
     margin: 15px;
     margin-top: 2px;
     background: #DBDBDB;
+    position: relative;
+    top: 20px;
 }
 
     #nav, #nav ul, #nav li, #nav a {
@@ -217,7 +219,6 @@ h6 {
 }
 
 #contingut-cnt {
-    height: 550px;
     background-image: url(imatges/bg-cnt2.jpg);
     margin: 15px;
     margin-top: 30px;
@@ -279,7 +280,6 @@ h6 {
 #peu {
     width: 100%;
     background: #A6A45C;
-    margin: 0px auto 20px auto;
     padding: 15px 0;
 }
 
@@ -335,301 +335,100 @@ h6 {
     width: 900px;
     margin: 0px auto;
     padding: 20px;
-    padding-top: 100px;
 }
 
-/*--GALERIA DE IMATGES--*/
-#finestra-imatges {
-    width: 872px;
-    height: 360px;
+/* SLIDER */
+.slideshow-container {
+    top: 20px;
+    max-width: 742px;
     position: relative;
-    margin: 10px auto;
-    background-image: url(imatges/bnimatges14.jpg);
-    overflow: hidden;
-    /*border-radius*/
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    margin: auto;
 }
 
-#finestra-imatgesmer {
-    width: 872px;
-    height: 360px;
-    position: relative;
-    margin: 10px auto;
-    background-image: url(imatges/bnimatges8.jpg);
-    overflow: hidden;
-    /*border-radius*/
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+.mini {
+    max-width: 480px;
 }
 
-.movimient {
-    width: 8500px;
+.slideshow-container .prev, .slideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slideshow-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slideshow-container .prev:hover, .slideshow-container .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.slideshow-container .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.slideshow-container .active, .slideshow-container .dot:hover {
+  background-color: #717171;
+}
+.slideshow-container .mySlides,.slideshow-container .mySlidesTurron, .slideshow-container .mySlidesMermelada, .slideshow-container .mySlidesAlmendra {
+    display: none;
+}
+.slideshow-container .mySlides img, .slideshow-container .mySlidesTurron img, .slideshow-container .mySlidesMermelada img, .slideshow-container .mySlidesAlmendra img, .slideshow-container .mySlidesCrema img {
+    vertical-align: middle;
+}
+.slideshow-container .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-name: fade;
+    -moz-animation-duration: 1.5s;
+}
+.slideshow-container .mySlides .numbertext,.slideshow-container .mySlidesTurron .numbertext,.slideshow-container .mySlidesMermelada .numbertext, .slideshow-container .mySlidesAlmendra .numbertext, .slideshow-container .mySlidesCrema .numbertext{
+    color: #fff;
+    font-size: 12px;
+    padding: 8px 12px;
     position: absolute;
     top: 20px;
-    right: -2160px;
-    height: 320px;
-    text-align: right;
+    left: 20px;
 }
-
-    .movimient img {
-        display: inline-block;
-        width: 240px;
-        margin: 70px 0 0 0;
-        cursor: pointer;
-        -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -webkit-transition: 5s;
-        -moz-transition: 5s;
-        -ms-transition: 5s;
-        -o-transition: 5s;
-        transition: 5s;
-    }
-
-        .movimient img:focus {
-            width: 480px;
-            margin-left: -60px;
-            margin-right: 60px;
-            margin-bottom: -80px;
-            margin-top: 0;
-            position: relative;
-            z-index: 100;
-            opacity: 1;
-            outline: 0;
-            -o-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            -ms-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-        }
-
-    .movimient .i1:focus ~ img.i21 {
-        margin-right: -2460px;
-    }
-
-    .movimient .i2:focus ~ img.i21 {
-        margin-right: -2220px;
-    }
-
-    .movimient .i3:focus ~ img.i21 {
-        margin-right: -1980px;
-    }
-
-    .movimient .i4:focus ~ img.i21 {
-        margin-right: -1740px;
-    }
-
-    .movimient .i5:focus ~ img.i21 {
-        margin-right: -1500px;
-    }
-
-    .movimient .i6:focus ~ img.i21 {
-        margin-right: -1260px;
-    }
-
-    .movimient .i7:focus ~ img.i21 {
-        margin-right: -1020px;
-    }
-
-    .movimient .i8:focus ~ img.i21 {
-        margin-right: -780px;
-    }
-
-    .movimient .i9:focus ~ img.i21 {
-        margin-right: -540px;
-    }
-
-    .movimient .i10:focus ~ img.i21 {
-        margin-right: -300px;
-    }
-
-    .movimient .i11:focus ~ img.i21 {
-        margin-right: -60px;
-    }
-
-    .movimient .i12:focus ~ img.i21 {
-        margin-right: 180px;
-    }
-
-    .movimient .i13:focus ~ img.i21 {
-        margin-right: 420px;
-    }
-
-    .movimient .i14:focus ~ img.i21 {
-        margin-right: 660px;
-    }
-
-    .movimient .i15:focus ~ img.i21 {
-        margin-right: 900px;
-    }
-
-    .movimient .i16:focus ~ img.i21 {
-        margin-right: 1140px;
-    }
-
-    .movimient .i17:focus ~ img.i21 {
-        margin-right: 1380px;
-    }
-
-    .movimient .i18:focus ~ img.i21 {
-        margin-right: 1620px;
-    }
-
-    .movimient .i19:focus ~ img.i21 {
-        margin-right: 1860px;
-    }
-
-    .movimient .i20:focus ~ img.i21 {
-        margin-right: 2100px;
-    }
-
-    .movimient .i21:focus {
-        margin-right: 2280px;
-    }
-
-
-/*--MOVIMENT PER IMATGES PER SA P�GINA D'ANGLES--*/
-#finestra-imatges2 {
-    width: 872px;
-    height: 360px;
-    position: relative;
-    margin: 10px auto;
-    background-image: url(imatges/bnimatges3.jpg);
-    overflow: hidden;
-    /*border-radius*/
+.slideshow-container .mySlides .text,.slideshow-container .mySlidesTurron .text,.slideshow-container .mySlidesMermelada .text, .slideshow-container .mySlidesAlmendra .text, .slideshow-container .mySlidesCrema .text {
+    top: 85%;
+    color: #494858;
+    background-color: rgba(161, 161, 161, .75);
+    font-size: 15px;
+    padding: 8px 12px;
+    width: 718px;
+    text-align: center;
+    position: absolute;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 }
-
-.movimient2 {
-    width: 8500px;
-    position: absolute;
-    top: 20px;
-    right: -2160px;
-    height: 320px;
-    text-align: right;
+@-moz-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
 }
-
-    .movimient2 img {
-        display: inline-block;
-        width: 240px;
-        margin: 70px 0 0 0;
-        cursor: pointer;
-        -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-        -webkit-transition: 5s;
-        -ms-transition: 5s;
-        -moz-transition: 5s;
-        -o-transition: 5s;
-        transition: 5s;
-    }
-
-        .movimient2 img:focus {
-            width: 480px;
-            margin-left: -60px;
-            margin-right: 60px;
-            margin-bottom: -80px;
-            margin-top: 0;
-            position: relative;
-            z-index: 100;
-            opacity: 1;
-            outline: 0;
-            -o-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            -ms-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-        }
-
-    .movimient2 .i1:focus ~ img.i21 {
-        margin-right: -2460px;
-    }
-
-    .movimient2 .i2:focus ~ img.i21 {
-        margin-right: -2220px;
-    }
-
-    .movimient2 .i3:focus ~ img.i21 {
-        margin-right: -1980px;
-    }
-
-    .movimient2 .i4:focus ~ img.i21 {
-        margin-right: -1740px;
-    }
-
-    .movimient2 .i5:focus ~ img.i21 {
-        margin-right: -1500px;
-    }
-
-    .movimient2 .i6:focus ~ img.i21 {
-        margin-right: -1260px;
-    }
-
-    .movimient2 .i7:focus ~ img.i21 {
-        margin-right: -1020px;
-    }
-
-    .movimient2 .i8:focus ~ img.i21 {
-        margin-right: -780px;
-    }
-
-    .movimient2 .i9:focus ~ img.i21 {
-        margin-right: -540px;
-    }
-
-    .movimient2 .i10:focus ~ img.i21 {
-        margin-right: -300px;
-    }
-
-    .movimient2 .i11:focus ~ img.i21 {
-        margin-right: -60px;
-    }
-
-    .movimient2 .i12:focus ~ img.i21 {
-        margin-right: 180px;
-    }
-
-    .movimient2 .i13:focus ~ img.i21 {
-        margin-right: 420px;
-    }
-
-    .movimient2 .i14:focus ~ img.i21 {
-        margin-right: 660px;
-    }
-
-    .movimient2 .i15:focus ~ img.i21 {
-        margin-right: 900px;
-    }
-
-    .movimient2 .i16:focus ~ img.i21 {
-        margin-right: 1140px;
-    }
-
-    .movimient2 .i17:focus ~ img.i21 {
-        margin-right: 1380px;
-    }
-
-    .movimient2 .i18:focus ~ img.i21 {
-        margin-right: 1620px;
-    }
-
-    .movimient2 .i19:focus ~ img.i21 {
-        margin-right: 1860px;
-    }
-
-    .movimient2 .i20:focus ~ img.i21 {
-        margin-right: 2100px;
-    }
-
-    .movimient2 .i21:focus {
-        margin-right: 2280px;
-    }
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text { font-size: 11px }
+}
