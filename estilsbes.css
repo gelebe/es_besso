@@ -10,8 +10,6 @@
 }
 /*--FONS DE PANTALLA--*/
 body {
-    /*background: no-repeat #800000;*/
-    background-image: url(imatges/DSC_0004.JPG);
     background-size: 100%;
 }
 
@@ -339,7 +337,6 @@ h6 {
 
 /* SLIDER */
 .slideshow-container {
-    top: 20px;
     max-width: 742px;
     position: relative;
     margin: auto;
@@ -405,7 +402,7 @@ h6 {
     left: 20px;
 }
 .slideshow-container .mySlides .text,.slideshow-container .mySlidesTurron .text,.slideshow-container .mySlidesMermelada .text, .slideshow-container .mySlidesAlmendra .text, .slideshow-container .mySlidesCrema .text {
-    top: 85%;
+    top: 92%;
     color: #494858;
     background-color: rgba(161, 161, 161, .75);
     font-size: 15px;
@@ -431,4 +428,122 @@ h6 {
 }
 @media only screen and (max-width: 300px) {
     .prev, .next, .text { font-size: 11px }
+}
+
+/* ACCORDION */
+.accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Expanded images */
+/* The Modal (background) */
+.modal, .modalMermelada, .modalAlmendra {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 15px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content, .modal-content-mermelada, .modal-content-almendra {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption, #captionMermelada, #captionAlmendra {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, .modal-content-mermelada, .modal-content-almendra, #caption, #captionMermelada, #captionAlmendra {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close,.closeMermelada, .closeAlmendra {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus,
+.closeMermelada:hover,
+.closeMermelada:focus,
+.closeAlmendra:hover,
+.closeAlmendra:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content, .modal-content-almendra, .modal-content-mermelada {
+        width: 100%;
+    }
 }
