@@ -90,7 +90,7 @@ h6 {
     height: 360px;
     position: relative;
     margin: 10px auto;
-    background-image: url(imatges/bnr14c.jpg);
+    background-image: url(imatges/edit2.jpg);
     overflow: hidden;
 }
 /*--FINESTRA INFORMATIVA DE SES FIRES--*/
@@ -217,7 +217,6 @@ h6 {
 }
 
 #contingut-cnt {
-    background-image: url(imatges/bg-cnt2.jpg);
     margin: 15px;
     margin-top: 30px;
     margin-bottom: 0px;
